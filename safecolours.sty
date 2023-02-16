@@ -1,0 +1,62 @@
+% safecolours
+%
+% Copyright 2023 Martin Trapp
+%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{safecolours}[2023/01/31 safecolours]
+
+\RequirePackage{xcolor}
+
+% Solin colours
+\definecolor{solin-colour1}{rgb}{0.2667,0.4471,0.7098} % blue
+\definecolor{solin-colour2}{rgb}{0.1647,0.6706,0.3804} % green
+\definecolor{solin-colour3}{rgb}{0.8275,0.2627,0.3059} % red
+\definecolor{solin-colour4}{rgb}{0.5216,0.4392,0.7176} % lighter blue
+\definecolor{solin-colour5}{rgb}{0.8118,0.7255,0.4118} % yellow
+\definecolor{solin-colour6}{rgb}{0.2745,0.7176,0.8157} % turquoise
+\definecolor{solin-colour7}{HTML}{BBBBBB} % grey
+
+% Light colours
+\definecolor{light-colour1}{rgb}{0.6902,0.7686,0.8863} % blue
+\definecolor{light-colour2}{rgb}{0.5451,0.8902,0.6941} % green
+\definecolor{light-colour3}{rgb}{0.9412,0.7490,0.7647} % red
+\definecolor{light-colour4}{rgb}{0.8627,0.8392,0.9176} % lighter blue
+\definecolor{light-colour5}{rgb}{0.9569,0.9373,0.8667} % yellow
+\definecolor{light-colour6}{rgb}{0.7529,0.9020,0.9373} % turquoise
+\definecolor{light-colour7}{rgb}{0.8750,0.8750,0.8750} % grey
+
+% Wong colours
+% Source: http://mkweb.bcgsc.ca/colorblind/palettes.mhtml
+\definecolor{wong-colour1}{HTML}{2271B2} % blue
+\definecolor{wong-colour2}{HTML}{3DB7E9} % cyan
+\definecolor{wong-colour3}{HTML}{F748A5} % pink
+\definecolor{wong-colour4}{HTML}{359B73} % green
+\definecolor{wong-colour5}{HTML}{D55E00} % red
+\definecolor{wong-colour6}{HTML}{E69F00} % gold
+\definecolor{wong-colour7}{HTML}{F0E442} % yellow	
+
+% Tol colours
+% Source: https://personal.sron.nl/%7Epault/
+\definecolor{tol-colour1}{HTML}{4477AA} % blue
+\definecolor{tol-colour2}{HTML}{EE6677} % cyan
+\definecolor{tol-colour3}{HTML}{228833} % green
+\definecolor{tol-colour4}{HTML}{CCBB44} % yellow
+\definecolor{tol-colour5}{HTML}{66CCEE} % red
+\definecolor{tol-colour6}{HTML}{AA3377} % purple
+\definecolor{tol-colour7}{HTML}{BBBBBB} % grey	
+
+\def\safecols{solin}
+\DeclareOption{light}{\def\safecols{light}}
+\DeclareOption{wong}{\def\safecols{wong}}
+\DeclareOption{tol}{\def\safecols{tol}}
+\ProcessOptions\relax
+
+%% TODO: Use a function for this...
+\colorlet{colour1}{\safecols-colour1}
+\colorlet{colour2}{\safecols-colour2}
+\colorlet{colour3}{\safecols-colour3}
+\colorlet{colour4}{\safecols-colour4}
+\colorlet{colour5}{\safecols-colour5}
+\colorlet{colour6}{\safecols-colour6}
+\colorlet{colour7}{\safecols-colour7}

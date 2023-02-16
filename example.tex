@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+
+\usepackage{tikz}
+\usepackage{safecolours}
+\usepackage{verbatim}
+
+\begin{document}
+
+\title{Safe Colours}
+\author{Martin Trapp}
+\maketitle
+
+\section{Colours}
+
+Colours are available through: \\
+\verb!solin-colour1, ..., solin-colour7!,\\
+\verb!light-colour1, ..., light-colour7!,\\
+\verb!wong-colour1, ..., wong-colour7!, and\\
+\verb!tol-colour1, ..., tol-colour7!.
+
+In addition, one can access the colours using \verb!colour1, ..., colour7! which defaults to the Solin colour palette. This can be changed by changing the argument of the \verb!\usepackage[arg]{safecolours}! to \verb!light!, \verb!wong! or \verb!tol!.
+\\[1em]
+\begin{tikzpicture}
+
+\node at (-1, 0) {\textbf{Solin}};
+\foreach \x in {1,...,7}
+	\node[fill=solin-colour\x, minimum height=15pt, minimum width=25pt, label=below:\x] at (\x, 0) {};
+	
+\node at (-1, -2) {\textbf{Light}};
+\foreach \x in {1,...,7}
+	\node[fill=light-colour\x, minimum height=15pt, minimum width=25pt, label=below:\x] at (\x, -2) {};
+	
+\node at (-1, -4) {\textbf{Wong}};
+\foreach \x in {1,...,7}
+	\node[fill=wong-colour\x, minimum height=15pt, minimum width=25pt, label=below:\x] at (\x, -4) {};
+
+\node at (-1, -6) {\textbf{Tol}};
+\foreach \x in {1,...,7}
+	\node[fill=tol-colour\x, minimum height=15pt, minimum width=25pt, label=below:\x] at (\x, -6) {};
+
+\end{tikzpicture}
+
+\end{document}
