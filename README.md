@@ -1,7 +1,7 @@
 # safecolours.sty
 Some latex definitions for colour-blind safe colours.
 
-Colours are available through: `scBlue` (blue), `scGreen` (green), `scRed` (red), `scPurple` (purple), `scYellow` (yellow), `scCyan` (cyan), and `scGrey (grey).
+Colours are available through: `scBlue` (blue), `scGreen` (green), `scRed` (red), `scPurple` (purple), `scYellow` (yellow), `scCyan` (cyan), and `scGrey` (grey).
 
 The default colour palette is Tol. This can be changed by passing an option to the package, e.g., `\usepackage[light]{safecolours}` for the Light colour palette.
 
