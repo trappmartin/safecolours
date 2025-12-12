@@ -12,7 +12,7 @@
 \definecolor{solin-colour1}{rgb}{0.2667,0.4471,0.7098} % blue
 \definecolor{solin-colour2}{rgb}{0.1647,0.6706,0.3804} % green
 \definecolor{solin-colour3}{rgb}{0.8275,0.2627,0.3059} % red
-\definecolor{solin-colour4}{rgb}{0.5216,0.4392,0.7176} % lighter blue
+\definecolor{solin-colour4}{rgb}{0.5216,0.4392,0.7176} % purple
 \definecolor{solin-colour5}{rgb}{0.8118,0.7255,0.4118} % yellow
 \definecolor{solin-colour6}{rgb}{0.2745,0.7176,0.8157} % turquoise
 \definecolor{solin-colour7}{HTML}{BBBBBB} % grey
@@ -29,34 +29,34 @@
 % Wong colours
 % Source: http://mkweb.bcgsc.ca/colorblind/palettes.mhtml
 \definecolor{wong-colour1}{HTML}{2271B2} % blue
-\definecolor{wong-colour2}{HTML}{3DB7E9} % cyan
-\definecolor{wong-colour3}{HTML}{F748A5} % pink
-\definecolor{wong-colour4}{HTML}{359B73} % green
-\definecolor{wong-colour5}{HTML}{D55E00} % red
-\definecolor{wong-colour6}{HTML}{E69F00} % gold
-\definecolor{wong-colour7}{HTML}{F0E442} % yellow	
+\definecolor{wong-colour2}{HTML}{359B73} % green
+\definecolor{wong-colour3}{HTML}{D55E00} % red
+\definecolor{wong-colour4}{HTML}{F748A5} % pink
+\definecolor{wong-colour5}{HTML}{F0E442} % yellow	
+\definecolor{wong-colour6}{HTML}{3DB7E9} % cyan
+\definecolor{wong-colour7}{HTML}{BBBBBB} % grey
 
 % Tol colours
 % Source: https://personal.sron.nl/%7Epault/
 \definecolor{tol-colour1}{HTML}{4477AA} % blue
-\definecolor{tol-colour2}{HTML}{EE6677} % cyan
-\definecolor{tol-colour3}{HTML}{228833} % green
-\definecolor{tol-colour4}{HTML}{CCBB44} % yellow
-\definecolor{tol-colour5}{HTML}{66CCEE} % red
-\definecolor{tol-colour6}{HTML}{AA3377} % purple
+\definecolor{tol-colour2}{HTML}{228833} % green
+\definecolor{tol-colour3}{HTML}{EE6677} % red
+\definecolor{tol-colour4}{HTML}{AA3377} % purple
+\definecolor{tol-colour5}{HTML}{CCBB44} % yellow
+\definecolor{tol-colour6}{HTML}{66CCEE} % cyan
 \definecolor{tol-colour7}{HTML}{BBBBBB} % grey	
 
-\def\safecols{solin}
+\def\safecols{tol}
 \DeclareOption{light}{\def\safecols{light}}
 \DeclareOption{wong}{\def\safecols{wong}}
 \DeclareOption{tol}{\def\safecols{tol}}
 \ProcessOptions\relax
 
 %% TODO: Use a function for this...
-\colorlet{colour1}{\safecols-colour1}
-\colorlet{colour2}{\safecols-colour2}
-\colorlet{colour3}{\safecols-colour3}
-\colorlet{colour4}{\safecols-colour4}
-\colorlet{colour5}{\safecols-colour5}
-\colorlet{colour6}{\safecols-colour6}
-\colorlet{colour7}{\safecols-colour7}
+\colorlet{scBlue}{\safecols-colour1}
+\colorlet{scGreen}{\safecols-colour2}
+\colorlet{scRed}{\safecols-colour3}
+\colorlet{scPurple}{\safecols-colour4}
+\colorlet{scYellow}{\safecols-colour5}
+\colorlet{scCyan}{\safecols-colour6}
+\colorlet{scGrey}{\safecols-colour7}

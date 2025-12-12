@@ -3,22 +3,25 @@
 \usepackage{tikz}
 \usepackage{safecolours}
 \usepackage{verbatim}
+\usepackage{url}
 
 \begin{document}
 
-\title{Safe Colours}
+\title{\texttt{safecolours}: Colourblind friendly colours}
 \author{Martin Trapp}
 \maketitle
 
 \section{Colours}
 
-Colours are available through: \\
+Colours are available through: \textcolor{scBlue}{\texttt{scBlue}} (blue), \textcolor{scGreen}{\texttt{scGreen}} (green), \textcolor{scRed}{\texttt{scRed}} (red), \textcolor{scPurple}{\texttt{scPurple}} (purple), \textcolor{scYellow}{\texttt{scYellow}} (yellow), \textcolor{scCyan}{\texttt{scCyan}} (cyan), and \textcolor{scGrey}{\texttt{scGrey}} (grey).
+
+The default colour palette is Tol. This can be changed by passing an option to the package, e.g., \verb!\usepackage[light]{safecolours}! for the Light colour palette.
+
+Alternatively, one can access the individual colour palettes directly using:\\
 \verb!solin-colour1, ..., solin-colour7!,\\
 \verb!light-colour1, ..., light-colour7!,\\
 \verb!wong-colour1, ..., wong-colour7!, and\\
 \verb!tol-colour1, ..., tol-colour7!.
-
-In addition, one can access the colours using \verb!colour1, ..., colour7! which defaults to the Solin colour palette. This can be changed by changing the argument of the \verb!\usepackage[arg]{safecolours}! to \verb!light!, \verb!wong! or \verb!tol!.
 \\[1em]
 \begin{tikzpicture}
 
@@ -39,5 +42,8 @@ In addition, one can access the colours using \verb!colour1, ..., colour7! which
 	\node[fill=tol-colour\x, minimum height=15pt, minimum width=25pt, label=below:\x] at (\x, -6) {};
 
 \end{tikzpicture}
+
+\section{Sources}
+Colours are compiled from the following sources: Wong \& Light colours: \url{http://mkweb.bcgsc.ca/colorblind/palettes.mhtml}, Tol colours: \url{https://personal.sron.nl/%7Epault/}
 
 \end{document}
